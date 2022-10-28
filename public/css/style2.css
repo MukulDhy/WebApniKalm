@@ -1,0 +1,56 @@
+/* .video-container{
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.text-video-part{
+    display: flex;
+}
+.text p{
+    word-wrap: break-word;
+    margin: 5px 0; 
+}
+.text-video-part img{
+    border-radius: 50%;
+    width: 60px;
+    margin-right: 10px;
+}
+.video{
+    flex-basis: 24.4%;
+    
+}
+.video a img{
+    width: 100%;
+    border-radius: 5px;
+}
+ */
+
+
+
+
+
+
+/* To Use Grid Layout */
+
+.video-container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-column-gap:16px ;
+    grid-row-gap:30px ;
+}
+.video a img{
+    width: 100%;
+    border-radius: 10px;
+}
+.text-video-part{
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.text-video-part h2{
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 20px;
+}
+.text a{
+    display: block;
+    
+}

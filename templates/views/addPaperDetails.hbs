@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni Kalm</title>
+    {{!-- <link rel="stylesheet" href="css/registration.css"> --}}
+    {{>links}}
+    <style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 90%;
+    
+    padding: 15px;
+    margin: 20px 0 22px 0;
+    display: block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+
+
+        label{
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        ol{
+            margin-left: 40px;
+        }
+      li{
+        margin: 10px 0;
+      }
+      .questionNumber{
+        margin: 20px 0;
+      }
+      .maintestForm{
+        position: relative;
+        top:100px;
+        width: 85%;
+        left:15%;
+        transition: width 0.5s ease, left 0.5s ease;
+      }
+      .maintestForm p{
+        margin: 5px 0;
+      }
+      .maintestForm h1{
+        margin: 10px 0;
+      }
+      .TestForm{
+        width: 95%;
+        left: 5%;
+      }
+      .container{
+    padding: 0;        
+      }
+      button {
+        width: 80%;
+        margin-left: 10%;
+      }
+      select{
+        width: 50%;
+        text-align: center;
+        height: 40px;
+
+      }
+
+
+    </style>
+</head>
+<body>
+
+    {{>header}}
+
+    <div class="maintestForm" id="#maintestForm">
+        <div class="margin">
+        <form action="/addPaperDetails" method="POST">
+
+        <div class="container">
+          <h1>Test Paper Details - Admin</h1>
+          <hr>
+
+
+          <div class="PaperName">
+     <label for="WhichPaper">Choose a WhichPaper :    &nbsp; &nbsp;</label>
+    <select name="PaperName" id="cars">
+    <option value="Paper1">Paper1</option>
+    <option value="Paper2">Paper2</option>
+    <option value="Paper3">Paper3</option>
+    <option value="Paper4">Paper4</option>
+    </select>
+          </div>
+            
+          <div class="question1 questionNumber">
+            <label for="Question1"><b>Question1</b></label>
+            <input type="text" name="adminQuestion1" id="" placeholder="Type Question Number 1">
+          </div>
+
+          <div class="question2 questionNumber">
+            <label for="Question1"><b>Question2</b></label>
+            <input type="text" name="adminQuestion2" id="" placeholder="Type Question Number 2">
+          </div>
+
+          <div class="question2 questionNumber">
+            <label for="Question1"><b>Question3</b></label>
+            <input type="text" name="adminQuestion3" id="" placeholder="Type Question Number 3">
+          </div>
+
+          <div class="question2 questionNumber">
+            <label for="Question1"><b>Question4</b></label>
+            <input type="text" name="adminQuestion4" id="" placeholder="Type Question Number 4">
+          </div>
+
+          <div class="question2 questionNumber">
+            <label for="Question1"><b>Question5</b></label>
+            <input type="text" name="adminQuestion5" id="" placeholder="Type Question Number 5">
+          </div>
+
+          <br>
+          <br>
+      
+          <button type="submit" class="registerbtn">Submit</button>
+        </div>
+        
+      </form>
+      </div>
+      </div>
+          
+
+
+{{>scriptLink}}
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youtube</title>
+
+<!-- Favi-Icon  -->
+<link rel="apple-touch-icon" sizes="180x180" href="imgaes/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Style Sheet Link -->
+<link rel="stylesheet" href="css/homeStyle.css">
+<!-- <link rel="stylesheet" href="style2.css"> -->
+
+<!-- Font Awosome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Header Section start -->
+<header>
+    <div class="container"> <!-- Used for Giving Both Side Margin of 5 px -->
+    <!----------------------- Nav Bar ---------------------- -->
+        <nav>
+            <div class="flex-div Nav-bar">
+                <!-- First Column -->
+                <div class="nav-left flex-div">
+                    <!-- <div class="menu-icon" id="menu-icon"> -->
+                        <img src="images/menu.png" id="menu-icon" alt="menu-icon">
+                    <!-- </div> -->
+                    <!-- <img src="images/logo.png" alt="logo"> -->
+                    <h2 id = "logo-Heading">Apni Kalm</h2>
+                </div>
+                <!-- Third Column -->
+                <div class="nav-right flex-div">
+                    <!-- <button onclick="DarkMode()" class="DarkMode" id="menubarButton">
+                         <i class="fas fa-moon"></i>
+                         <i class="fas fa-sun"></i>
+                         <div class="ball"></div>
+                     </button>  -->
+                    <img src="images/new/user.png" id="account-icon" alt="">
+                </div>
+            </div>
+
+        </nav>
+            
+        
+           
+
+
+        </div>
+    
+    </div>
+
+    <!-- -----------------------Side Bar--------------------- -->
+
+    <div class="sideBar" id="sideBar">
+        <div class="row  flex-div ">
+            <img src="images/new/open-book.png" alt="">
+            <!-- <i class="fas fa-book"></i> -->
+            <a href="#">Courses</a>
+        </div>
+        <div class="row  flex-div ">
+            <img src="images/new/test.png" alt="">
+            <a href="#">Test</a>
+        </div>
+        <div class="row  flex-div ">
+            <img src="images/new/progress-report.png" alt="">
+            <a href="#">Progress Report</a>
+        </div>
+        <div class="row  flex-div ">
+            <img src="images/new/user.png" alt="">
+            <a href="#">Profile</a>
+        </div>
+        
+        
+        <hr>  <!-- Horizotal Ruler --> </hr>
+        
+        <div class="row">
+            <h3>Currently</h3>
+        </div>
+        <div class="row  flex-div ">
+            <img src="images/new/login.png" alt="">
+            <a href="#">LogIn</a>
+        </div>
+        <div class="row  flex-div ">
+            <img src="images/new/enter.png" alt="">
+            <a href="#">LogOut</a>
+        </div>
+        
+    </div>
+
+
+    <!-- <div class="downBar flex-div "id="DownBar">
+        <div class="DownBar-text active">
+        <img src="images/home.png" alt="">
+        <p><a>Home</a></p>
+        </div>
+        <div class="DownBar-text">
+        <img src="images/explore.png" alt="">
+        <p>Explore</p>
+        </div>
+        <div class="DownBar-text">
+        <img src="images/history.png" alt="">
+        <p>History</p>
+        </div>
+    </div> -->
+
+</header>
+
+<main class="main">
+<div class="flex-div">
+    <div class="col-2">
+        <div class="main-section">
+            <h1><span style="color:red">{{UserName}}</span>! WELCOME TO APNI KALM</h1>
+                <p>Learn, Practice Test, Analyse and ask doubts to </p>
+                   <p>Apni Kalm Q&A community.</p>
+        </div>
+    </div>
+    <div class="col-2">
+        <img src="images/ae5ae16a1f8bdad663c96a699d91e646.jpg"  alt="">
+    </div>
+</div>
+
+</main>
+
+
+
+<script src="js/script.js"></script>
+
+<script>
+    let menuIcon=document.querySelector("#menu-icon");
+    let sideBar=document.querySelector("#sideBar");
+    let HideContent=document.querySelectorAll(".row.a");
+    let mainSection=document.querySelector("main");
+
+
+    menuIcon.addEventListener("click",myFunction);
+
+    function myFunction(){
+        sideBar.classList.toggle("small-sideBar");
+        mainSection.classList.toggle("large-Container");
+        
+    }
+    let MenuBar=document.getElementById("menubarButton");
+    let body=document.querySelector("body");
+    let html=document.querySelector("html");
+    let div=document.querySelectorAll("div");
+    let textarea=document.querySelector("textarea");
+    // console.log(div);
+    function DarkMode(){
+        MenuBar.classList.toggle("Changetheme");
+        body.classList.toggle("Theme-Color");
+        html.classList.toggle("Theme-Color");
+        textarea.classList.toggle("TextArea-Color");
+        for(let i=0;i<=div.length;i++){
+            div[i].classList.toggle("Theme-Color");
+        }
+        
+        
+
+    }
+
+    // let accountIcon=document.getElementById("account-icon");
+    // accountIcon.addEventListener("click", function(){
+    //     if(MenuBar.style.display=="none"){
+    //         MenuBar.style.display="block";
+    //     }
+    //     else{
+    //         MenuBar.style.display="none";
+    //     }
+
+    // });
+
+    
+    let sideBarDiv = document.querySelectorAll(".sideBar div");
+    
+    for(let i=0 ; i <= sideBarDiv.length ; i++){
+
+    sideBarDiv[i].addEventListener("click" ,function(){
+        sideBarDiv[i].classList.toggle("active");
+    });
+        
+    }
+        
+
+</script>
+<!-- <script src="script.js"></script> -->
+</body>
+
+</html>

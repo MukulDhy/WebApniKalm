@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni Kalm</title>
+    {{!-- <link rel="stylesheet" href="css/progress.css"> --}}
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registration.css">
+
+    <style>
+table{
+    width: 100%;
+    /* min-width: 500px; */
+    /* border: 2px solid black; */
+    border-radius: 15px;
+    color: black;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+}
+.progressReport{
+    position: relative;
+    top:130px;
+    width: 85%;
+    left:15%;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+th{
+    padding : 16px; 
+}
+
+td{
+    text-align: center;
+    padding : 16px;  
+}
+tr{
+    margin: 40px;
+}
+.margin{
+    margin: 0 30px;
+}
+.container{
+    padding: 0;        
+}
+.progressForm{
+    width: 95%;
+    left: 5%;
+}
+    </style>
+    {{>links}}
+</head>
+<body>
+    {{>header}}
+
+
+    <div class="progressReport" id="#progress-Report">
+        <div class="margin">
+        <div class="container">
+
+        <table>
+            <tr>
+                <th>Paper Name</th>
+                <th>Last Score</th>
+                <th>Current Score</th>
+                <th>Average</th>
+                <th>Total</th>
+            </tr>
+
+            <tr>
+                <td>Paper Name1</td>
+                <td>Last Score1</td>
+                <td>Current Score1</td>
+                <td>Average1</td>
+                <td>Total1</td>
+            </tr>
+
+            <tr>
+                <td>Paper Name2</td>
+                <td>Last Score2</td>
+                <td>Current Score2</td>
+                <td>Average2</td>
+                <td>Total2</td>
+            </tr>
+            <tr>
+                <td>Paper Name2</td>
+                <td>Last Score2</td>
+                <td>Current Score2</td>
+                <td>Average2</td>
+                <td>Total2</td>
+            </tr>
+            <tr>
+                <td>Paper Name2</td>
+                <td>Last Score2</td>
+                <td>Current Score2</td>
+                <td>Average2</td>
+                <td>Total2</td>
+            </tr>
+            <tr>
+                <td>Paper Name2</td>
+                <td>Last Score2</td>
+                <td>Current Score2</td>
+                <td>Average2</td>
+                <td>Total2</td>
+            </tr>
+        </table>
+            
+       </div>
+      </div>
+      </div>
+
+
+
+    {{>scriptLink}}
+</body>
+</html>
