@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-require("./Db/connMongoDb");
+// require("./Db/connMongoDb");
 const LoginFormDetails = require("./models/apniKalmSchema");
 const path = require("path");
 const hbs =require("hbs");
@@ -56,6 +56,9 @@ app.get("/addPaperDetails" , (req,res) => {
     // res.send("Hlw from the home page.");
     res.render('addPaperDetails.hbs')
 });
+
+
+/* Step heroku */
 
 
 app.listen(port , "127.0.0.1" , (req,res) => {
