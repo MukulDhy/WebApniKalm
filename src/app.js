@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-require("./Db/connMongoDb");
+// require("./Db/connMongoDb");
 const LoginFormDetails = require("./models/apniKalmSchema");
 const path = require("path");
 const hbs =require("hbs");
